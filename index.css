@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+body {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translate(-50%, 0);
+  font-size: 18px;
+}
+
+.card {
+  border-radius: 18px;
+  box-shadow: 10px 18px 32px hsla(224, 30%, 27%, 0.1);
+  display: flex;
+  flex: 0 0 720px;
+  height: 480px;
+}
+.result {
+  width: 100%;
+  padding: 36px 42px;
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%) 70%
+  );
+  color: hsl(241, 100%, 89%);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.summary {
+  width: 100%;
+  padding: 36px 42px;
+}
+.result header {
+  font-size: 24px;
+}
+.result .score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 81%, 54%, 0.108) 90%
+  );
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 64px;
+  color: #fff;
+  width: 180px;
+  height: 180px;
+  font-weight: 800;
+  > span {
+    color: hsla(241, 100%, 89%, 0.502);
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+.score-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  text-align: center;
+  gap: 12px;
+  > header {
+    color: #fff;
+    font-weight: 700;
+    font-size: 32px;
+  }
+}
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  gap: 18px;
+}
+.summary header {
+  align-self: flex-start;
+  font-size: 24px;
+  color: hsla(224, 30%, 27%, 0.9);
+  font-weight: 700;
+}
+.summary .reports {
+  height: 65%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+.summary .report {
+  padding: 4px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-radius: 8px;
+  > span {
+    color: hsla(224, 30%, 27%, 0.9);
+    font-weight: 700;
+  }
+  > span::after {
+    content: ' / 100';
+    color: hsla(224, 30%, 27%, 0.5);
+  }
+}
+.report-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+
+  > img {
+    width: 18px;
+    height: 18px;
+  }
+}
+.red {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.05);
+}
+.yellow {
+  color: hsl(39, 100%, 56%);
+  background-color: hsl(39, 100%, 56%, 0.05);
+}
+.green {
+  color: hsl(166, 100%, 37%);
+  background-color: hsl(166, 100%, 37%, 0.05);
+}
+.purple {
+  color: hsl(234, 85%, 45%);
+  background-color: hsl(234, 85%, 45%, 0.05);
+}
+button {
+  width: 100%;
+  padding: 18px;
+  border-radius: 10%/50%;
+  font-size: 18px;
+  margin-top: 24px;
+  color: hsl(221, 100%, 96%);
+  background: hsl(224, 30%, 27%);
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%) 70%
+  );
+}
+@media screen and (max-width: 375px) {
+  .attribution {
+    display: none;
+  }
+
+  .card {
+    flex-direction: column;
+    flex: 1;
+    height: 100vh;
+  }
+  .result {
+    border-radius: 0 0 22px 22px;
+    gap: 8px;
+  }
+  .score-sub {
+    width: 90%;
+    > header {
+      font-size: 24px;
+    }
+  }
+  .result .score {
+    width: 150px;
+    height: 150px;
+  }
+}
